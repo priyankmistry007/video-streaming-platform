@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vidtube</title>
+  <link rel="stylesheet" href="home_page.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Vidtube</div>
+    <form onsubmit="searchVideos(); return false;">
+      <input type="text" placeholder="Search videos..." id="searchBox">
+      <button type="submit">Search</button>
+    </form>
+    <div class="auth-links">
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="upload.html">Upload</a>
+  </nav>
+
+  <main id="video-grid">
+    <div class="video-card">
+      <a href="watch1.html">
+        <img src="https://i.ytimg.com/vi/PkZNo7MFNFg/hqdefault.jpg" alt="Thumbnail" class="thumbnail">
+        <div class="video-info">
+          <div class="video-title">Learn JavaScript - Full Course</div>
+          <div class="video-meta">freeCodeCamp.org • 1M views • 2 years ago</div>
+        </div>
+      </a>
+    </div>
+    <div class="video-card">
+      <a href="watch.html?video=2">
+        <img src="https://i.ytimg.com/vi/DLX62G4lc44/hqdefault.jpg" alt="Thumbnail" class="thumbnail">
+        <div class="video-info">
+          <div class="video-title">Learn React in 1 Hour</div>
+          <div class="video-meta">Programming with Mosh • 750K views • 1 year ago</div>
+        </div>
+      </a>
+    </div>
+    <div class="video-card">
+      <a href="watch.html?video=3">
+        <div class="placeholder">Loading...</div>
+        <div class="video-info">
+          <div class="video-title">Video Title</div>
+          <div class="video-meta">Channel Name • Views • Time</div>
+        </div>
+      </a>
+    </div>
+    <div class="video-card">
+      <a href="watch.html?video=4">
+        <div class="placeholder">Loading...</div>
+        <div class="video-info">
+          <div class="video-title">Video Title</div>
+          <div class="video-meta">Channel Name • Views • Time</div>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <script>
+    function searchVideos() {
+      const query = document.getElementById('searchBox').value;
+      alert('Search for: ' + query);
+    }
+  </script>
+</body>
+</html>
